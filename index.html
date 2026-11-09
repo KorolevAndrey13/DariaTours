@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Дарья Данилова — Авторские туры</title>
+  <meta name="description" content="Авторские туры, гастротуры и индивидуальные маршруты по России от Дарьи Даниловой.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--
+  КАРТИНКИ: у каждого <img> есть data-local="images/....jpg".
+  Положите свои файлы в папку images/ с этими именами и поставьте
+  USE_LOCAL_IMAGES = true в начале script.js — сайт переключится на локальные фото.
+-->
+
+<!-- ============ 1. ШАПКА ============ -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <a href="#top" class="logo">
+      <span class="logo__name">Дарья Данилова</span>
+      <span class="logo__sep">|</span>
+      <span class="logo__tag">Авторские туры</span>
+    </a>
+
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="#services">Услуги</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+      <a href="#contacts" class="btn btn--small nav__cta">Связаться</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ 2. HERO ============ -->
+  <section class="hero">
+    <img class="hero__img"
+         src="https://images.unsplash.com/photo-1632504060548-f63c99774401?w=2000&q=80&auto=format&fit=crop"
+         data-local="images/hero.jpg"
+         alt="Сулакский каньон в Дагестане с бирюзовой рекой среди гор">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <p class="eyebrow eyebrow--light">Россия · авторские маршруты</p>
+      <h1 class="hero__title">Путешествия, которые собраны под&nbsp;вас</h1>
+      <p class="hero__subtitle">Водопады, каньоны и лучшие гастрономические места — без шаблонов и суеты.</p>
+      <a href="#services" class="btn btn--accent">Выбрать формат</a>
+    </div>
+    <a href="#about" class="hero__scroll" aria-label="Прокрутить вниз"></a>
+  </section>
+
+  <!-- ============ 3. ОБ АВТОРЕ ============ -->
+  <section class="section about" id="about">
+    <div class="container about__grid">
+      <div class="about__photo reveal">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=900&q=80&auto=format&fit=crop"
+             data-local="images/author.jpg"
+             alt="[ФОТО АВТОРА] Портрет Дарьи Даниловой" loading="lazy">
+      </div>
+      <div class="about__text reveal">
+        <p class="eyebrow">Об авторе</p>
+        <h2 class="section__title">Привет, я Дарья</h2>
+        <p>Я собираю путешествия, в которых нет случайных мест: каждый водопад, тропа и ресторан проверены лично.</p>
+        <p>Мне важно, чтобы вы отдыхали, а не разбирались с логистикой, — поэтому я беру на себя всё: от тайминга до столика у окна.</p>
+        <p>Маршрут строится под ваш темп, интересы и бюджет — для пары, семьи или компании друзей.</p>
+
+        <ul class="facts">
+          <li><strong>[50+]</strong><span>маршрутов</span></li>
+          <li><strong>[7]</strong><span>лет в туризме</span></li>
+          <li><strong>[300+]</strong><span>гостей</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. УСЛУГИ ============ -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Услуги</p>
+        <h2 class="section__title">Три формата путешествия</h2>
+        <p class="section__lead">Выберите, сколько вы хотите доверить мне, — от готового плана до поездки под ключ.</p>
+      </div>
+
+      <div class="cards">
+        <!-- а) План поездки -->
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="https://images.unsplash.com/photo-1715527942006-cde9193947c6?w=900&q=80&auto=format&fit=crop"
+                 data-local="images/service-plan.jpg"
+                 alt="Мраморный каньон Рускеала в Карелии" loading="lazy">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">План поездки</h3>
+            <p class="card__desc">Индивидуальный маршрут, по которому вы путешествуете самостоятельно.</p>
+            <ul class="card__list">
+              <li>Подборка мест под ваши интересы</li>
+              <li>Рестораны и кафе с бронированием</li>
+              <li>Логистика: как и на чём добраться</li>
+              <li>Тайминг по дням и часам</li>
+            </ul>
+            <div class="card__footer">
+              <p class="card__price">от <span>2&nbsp;000 ₽</span></p>
+              <a href="#contacts" class="btn btn--outline" data-service="plan">Заказать</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- б) Гастротур -->
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=900&q=80&auto=format&fit=crop"
+                 data-local="images/service-gastro.jpg"
+                 alt="Бокал красного вина на фоне виноградников" loading="lazy">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Гастротур</h3>
+            <p class="card__desc">Путешествие через вкус: локальная кухня, вино и люди, которые их создают.</p>
+            <ul class="card__list">
+              <li>Авторские рестораны</li>
+              <li>Винодельни и дегустации</li>
+              <li>Локальные рынки и фермы</li>
+              <li>Мастер-классы с шефами</li>
+            </ul>
+            <div class="card__footer">
+              <p class="card__price">от <span>50&nbsp;000 ₽</span></p>
+              <a href="#contacts" class="btn btn--outline" data-service="gastro">Заказать</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- в) Под ключ — главная -->
+        <article class="card card--featured reveal">
+          <span class="badge">Популярное</span>
+          <div class="card__media">
+            <img src="https://images.unsplash.com/photo-1548130516-2ca6aaeb84b9?w=900&q=80&auto=format&fit=crop"
+                 data-local="images/service-turnkey.jpg"
+                 alt="Остров Ольхон на Байкале, скалистый берег и бирюзовая вода" loading="lazy">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Авторский тур под&nbsp;ключ</h3>
+            <p class="card__desc">Вы просто приезжаете — всё остальное я беру на себя.</p>
+            <ul class="card__list">
+              <li>Авторский маршрут</li>
+              <li>Трансфер на всём пути</li>
+              <li>Проживание в отобранных отелях</li>
+              <li>Личное сопровождение</li>
+            </ul>
+            <div class="card__footer">
+              <p class="card__price">от <span>100&nbsp;000 ₽</span></p>
+              <a href="#contacts" class="btn btn--accent" data-service="turnkey">Заказать</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. ГАЛЕРЕЯ ============ -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Галерея</p>
+        <h2 class="section__title">Места, куда мы поедем</h2>
+      </div>
+
+      <div class="gallery__grid">
+        <button class="gallery__item gallery__item--tall reveal" type="button">
+          <img src="https://images.unsplash.com/photo-1595953907520-afb57960d457?w=1200&q=80&auto=format&fit=crop"
+               data-local="images/waterfall.jpg"
+               alt="Водопад Эсто-Садок в Красной Поляне" loading="lazy">
+        </button>
+        <button class="gallery__item reveal" type="button">
+          <img src="https://images.unsplash.com/photo-1617573543793-1b13d0a3f75c?w=1200&q=80&auto=format&fit=crop"
+               data-local="images/canyon.jpg"
+               alt="Сулакский каньон в Дагестане с высоты" loading="lazy">
+        </button>
+        <button class="gallery__item reveal" type="button">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=80&auto=format&fit=crop"
+               data-local="images/restaurant-1.jpg"
+               alt="Уютный зал ресторана с тёплым светом" loading="lazy">
+        </button>
+        <button class="gallery__item reveal" type="button">
+          <img src="https://images.unsplash.com/photo-1640957660034-dc3df6c99f3b?w=1200&q=80&auto=format&fit=crop"
+               data-local="images/mountains.jpg"
+               alt="Эльбрус над зелёной горной долиной" loading="lazy">
+        </button>
+        <button class="gallery__item gallery__item--tall reveal" type="button">
+          <img src="https://images.unsplash.com/photo-1635538367564-c49985fb8df2?w=1200&q=80&auto=format&fit=crop"
+               data-local="images/forest.jpg"
+               alt="Бирюзовое озеро в хвойном лесу на Алтае" loading="lazy">
+        </button>
+        <button class="gallery__item reveal" type="button">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80&auto=format&fit=crop"
+               data-local="images/restaurant-2.jpg"
+               alt="Подача блюда в ресторане высокой кухни" loading="lazy">
+        </button>
+        <button class="gallery__item reveal" type="button">
+          <img src="https://images.unsplash.com/photo-1697394921127-b17fbe0ca94f?w=1200&q=80&auto=format&fit=crop"
+               data-local="images/canyon-2.jpg"
+               alt="Горный каньон с рекой в Дагестане" loading="lazy">
+        </button>
+        <button class="gallery__item reveal" type="button">
+          <img src="https://images.unsplash.com/photo-1706087380194-b540f8b6546e?w=1200&q=80&auto=format&fit=crop"
+               data-local="images/mountains-2.jpg"
+               alt="Заснеженные вершины Эльбруса" loading="lazy">
+        </button>
+        <button class="gallery__item reveal" type="button">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=80&auto=format&fit=crop"
+               data-local="images/restaurant-3.jpg"
+               alt="Светлый зал ресторана с деревянными столами" loading="lazy">
+        </button>
+        <button class="gallery__item reveal" type="button">
+          <img src="https://images.unsplash.com/photo-1641555128422-12a08a5028f1?w=1200&q=80&auto=format&fit=crop"
+               data-local="images/altai.jpg"
+               alt="Река в долине среди гор Алтая" loading="lazy">
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. ОТЗЫВЫ ============ -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Отзывы</p>
+        <h2 class="section__title">Что говорят гости</h2>
+        <p class="section__lead">Несколько слов от тех, кто уже путешествовал по моим маршрутам.</p>
+      </div>
+      <div class="reviews__grid">
+        <figure class="review reveal">
+          <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+          <blockquote class="review__text">«Лучший отпуск за последние годы! Дарья продумала всё до мелочей — от виноделен до столика с видом на горы. Мы только наслаждались.»</blockquote>
+          <figcaption class="review__author">
+            <span class="review__avatar" aria-hidden="true">АС</span>
+            <span><strong>Анна Соколова</strong><small>Гастротур</small></span>
+          </figcaption>
+        </figure>
+        <figure class="review reveal">
+          <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+          <blockquote class="review__text">«Ездили вчетвером с детьми. Ни одной накладки, всё по таймингу, а водопады — просто сказка. Обязательно вернёмся.»</blockquote>
+          <figcaption class="review__author">
+            <span class="review__avatar" aria-hidden="true">МО</span>
+            <span><strong>Михаил Орлов</strong><small>Авторский тур под ключ</small></span>
+          </figcaption>
+        </figure>
+        <figure class="review reveal">
+          <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+          <blockquote class="review__text">«Получила подробный маршрут по дням с ресторанами и подсказками. Путешествовали сами, но ощущение, будто с личным гидом.»</blockquote>
+          <figcaption class="review__author">
+            <span class="review__avatar" aria-hidden="true">ЕБ</span>
+            <span><strong>Екатерина Белова</strong><small>План поездки</small></span>
+          </figcaption>
+        </figure>
+        <figure class="review reveal">
+          <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+          <blockquote class="review__text">«Думал, что знаю регион, но Дарья открыла места, о которых я не слышал. Мастер-класс с шефом — отдельный восторг.»</blockquote>
+          <figcaption class="review__author">
+            <span class="review__avatar" aria-hidden="true">СК</span>
+            <span><strong>Сергей Кузнецов</strong><small>Гастротур</small></span>
+          </figcaption>
+        </figure>
+        <figure class="review reveal">
+          <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+          <blockquote class="review__text">«Очень тёплая атмосфера и внимание к каждой детали. Дарья всегда была на связи и подстраивалась под наш темп.»</blockquote>
+          <figcaption class="review__author">
+            <span class="review__avatar" aria-hidden="true">ОМ</span>
+            <span><strong>Ольга Морозова</strong><small>Авторский тур под ключ</small></span>
+          </figcaption>
+        </figure>
+        <figure class="review reveal">
+          <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+          <blockquote class="review__text">«Красивые места без толп туристов и честные рекомендации. За такие деньги — отличное вложение в отпуск.»</blockquote>
+          <figcaption class="review__author">
+            <span class="review__avatar" aria-hidden="true">ИЛ</span>
+            <span><strong>Иван Лебедев</strong><small>План поездки</small></span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. КАК ЭТО РАБОТАЕТ ============ -->
+  <section class="section steps-section">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Как это работает</p>
+        <h2 class="section__title">Четыре шага до поездки</h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step__num">01</span>
+          <h3>Заявка</h3>
+          <p>Оставьте заявку на сайте или напишите в мессенджер.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">02</span>
+          <h3>Созвон</h3>
+          <p>Мы обсудим даты, интересы, темп и бюджет поездки.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">03</span>
+          <h3>Маршрут</h3>
+          <p>Я соберу маршрут и согласую его с вами до мелочей.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">04</span>
+          <h3>Путешествие</h3>
+          <p>Вы отдыхаете, а я на связи на протяжении всей поездки.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 8. КОНТАКТЫ ============ -->
+  <section class="section contacts" id="contacts">
+    <div class="container contacts__grid">
+      <div class="contacts__info reveal">
+        <p class="eyebrow eyebrow--light">Контакты</p>
+        <h2 class="section__title">Давайте соберём ваше путешествие</h2>
+        <p>Напишите в удобный мессенджер или оставьте заявку — я отвечу в течение 10 минут.</p>
+        <div class="messengers">
+          <a href="https://t.me/[TELEGRAM_USERNAME]" class="btn btn--light" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://wa.me/[НОМЕР_WHATSAPP]" class="btn btn--light" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <p class="contacts__extra"><a href="tel:+79206142474">8 920 614-24-74</a></p>
+      </div>
+
+      <form class="form reveal" id="order-form" novalidate>
+        <label class="form__field">
+          <span>Имя</span>
+          <input type="text" name="name" placeholder="Как к вам обращаться" required autocomplete="name">
+        </label>
+        <label class="form__field">
+          <span>Телефон</span>
+          <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+        </label>
+        <label class="form__field">
+          <span>Услуга</span>
+          <select name="service" required>
+            <option value="" disabled selected>Выберите формат</option>
+            <option value="plan">План поездки</option>
+            <option value="gastro">Гастротур</option>
+            <option value="turnkey">Авторский тур под ключ</option>
+          </select>
+        </label>
+        <label class="form__field">
+          <span>Комментарий</span>
+          <textarea name="comment" rows="4" placeholder="Даты, количество человек, пожелания"></textarea>
+        </label>
+        <button type="submit" class="btn btn--accent btn--block">Отправить заявку</button>
+        <p class="form__note">Нажимая кнопку, вы соглашаетесь с [ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ].</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ 9. ФУТЕР ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="footer__name">Дарья Данилова · Авторские туры</p>
+    <div class="footer__social">
+      <a href="[ССЫЛКА_INSTAGRAM]" target="_blank" rel="noopener">Instagram</a>
+      <a href="[ССЫЛКА_VK]" target="_blank" rel="noopener">ВКонтакте</a>
+      <a href="https://t.me/[TELEGRAM_КАНАЛ]" target="_blank" rel="noopener">Telegram-канал</a>
+    </div>
+    <p class="footer__copy">© 2025 Все права защищены</p>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фото" hidden>
+  <button class="lightbox__close" aria-label="Закрыть">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" aria-label="Предыдущее фото">&#8249;</button>
+  <img class="lightbox__img" src="" alt="">
+  <button class="lightbox__nav lightbox__nav--next" aria-label="Следующее фото">&#8250;</button>
+  <p class="lightbox__caption"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
